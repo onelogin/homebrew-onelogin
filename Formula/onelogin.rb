@@ -11,6 +11,13 @@ class Onelogin < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    root_url "https://github.com/onelogin/homebrew-onelogin/releases/download/onelogin-0.1.17"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, catalina:     "a440affeb882b4af4519ac47e84264966efa99742f05a287e776d072f7da0003"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ba82d7412abf89d6d067a2c2d643d1ee1cd6c881910405bda2be3602dcebc752"
+  end
+
   depends_on "go" => :build
 
   def install
